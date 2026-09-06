@@ -21,10 +21,10 @@ pipeline {
                     --exclude=.git \
                     frontend/ /root/applications/frontend/frontend/
 
-                    cd /root/applications/frontend/frontend
-                    sudo npm install
+                    sudo npm install --prefix /root/applications/frontend/frontend
 
                     sudo systemctl restart frontend
+
                     sudo systemctl status frontend --no-pager
                 '''
             }
